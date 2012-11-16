@@ -43,5 +43,5 @@ def issubpath(childPath, parentPath):
     return fixpath(childPath).startswith(fixpath(parentPath))
 
 if __name__ == "__main__":
-    print issubpath("c:\cygwin\home\dvanhaaster\workspace\prymatex\prymatex\utils\osextra\path.py", "C:/cygwin/home/dvanhaaster/workspace/prymatex")
+    print issubpath("c:\cygwin\home\dvanhaaster\Project\prymatex\prymatex\utils\osextra\path.py", "C:/cygwin/home/dvanhaaster/Project/prymatex")
     print expand_shell_var("$PATH/alfa")

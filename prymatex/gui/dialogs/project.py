@@ -67,7 +67,7 @@ class PMXNewProjectDialog(QtGui.QDialog, Ui_NewProjectDialog):
         
     def on_lineProjectName_textChanged(self, text):
         if self.checkBoxUseDefaultLocation.isChecked():
-            projectPath = os.path.join(self.application.projectManager.workspaceDirectory, text)
+            projectPath = os.path.join(self.application.projectManager.ProjectDirectory, text)
             self.lineLocation.setText(projectPath)
         self.buttonCreate.setEnabled(bool(text.strip()))
     
@@ -79,7 +79,7 @@ class PMXNewProjectDialog(QtGui.QDialog, Ui_NewProjectDialog):
         self.lineLocation.setEnabled(not checked)
         self.buttonChoose.setEnabled(not checked)
         if checked:
-            projectPath = os.path.join(self.application.projectManager.workspaceDirectory, self.lineProjectName.text())
+            projectPath = os.path.join(self.application.projectManager.ProjectDirectory, self.lineProjectName.text())
             self.lineLocation.setText(projectPath)
     
     def on_checkBoxAddToWorkingSet_toggled(self, checked):
@@ -138,7 +138,7 @@ class PMXNewProjectDialog(QtGui.QDialog, Ui_NewProjectDialog):
         dlg = cls(parent)
         dlg.lineProjectName.setText(name or '')
         dlg.buttonCreate.setEnabled(not directory is None and not name is None)
-        dlg.lineLocation.setText(directory or dlg.application.projectManager.workspaceDirectory)
+        dlg.lineLocation.setText(directory or dlg.application.projectManager.ProjectDirectory)
         dlg.checkBoxUseTemplate.setChecked(False)
         if dlg.exec_() == dlg.Accepted:
             return dlg.projectCreated

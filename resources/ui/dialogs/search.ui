@@ -147,9 +147,9 @@
      </property>
      <layout class="QVBoxLayout" name="verticalLayout_2">
       <item>
-       <widget class="QRadioButton" name="radioButtonWorkspace">
+       <widget class="QRadioButton" name="radioButtonProject">
         <property name="text">
-         <string>Workspace</string>
+         <string>Project</string>
         </property>
         <property name="checked">
          <bool>true</bool>

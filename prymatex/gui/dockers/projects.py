@@ -296,7 +296,7 @@ class PMXProjectDock(QtGui.QDockWidget, Ui_ProjectsDock, PMXFileSystemTasks, PMX
             #Es proyecto
             question = CheckableMessageBox.questionFactory(self,
                 "Delete project",
-                "Are you sure you want to delete project '%s' from the workspace?" % treeNode.name,
+                "Are you sure you want to delete project '%s' from the Project?" % treeNode.name,
                 "Delete project contents on disk (cannot be undone)",
                 QtGui.QMessageBox.Ok | QtGui.QMessageBox.Cancel,
                 QtGui.QMessageBox.Ok
@@ -316,7 +316,7 @@ class PMXProjectDock(QtGui.QDockWidget, Ui_ProjectsDock, PMXFileSystemTasks, PMX
         if treeNode.isproject:
             ret = QtGui.QMessageBox.question(self,
                 "Remove project",
-                "Are you sure you want to remove project '%s' from the workspace?" % treeNode.name,
+                "Are you sure you want to remove project '%s' from the Project?" % treeNode.name,
                 QtGui.QMessageBox.Ok | QtGui.QMessageBox.Cancel,
                 QtGui.QMessageBox.Ok
             )

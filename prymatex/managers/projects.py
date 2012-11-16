@@ -25,7 +25,7 @@ class ProjectManager(QtCore.QObject, PMXBaseComponent):
     #Settings
     SETTINGS_GROUP = 'ProjectManager'
     
-    workspaceDirectory  = pmxConfigPorperty(default = os.path.join(get_home_dir(), "workspace"))  #Eclipse muejejeje
+    ProjectDirectory  = pmxConfigPorperty(default = os.path.join(get_home_dir(), "Project"))  #Eclipse muejejeje
     knownProjects = pmxConfigPorperty(default = [])
     workingSets = pmxConfigPorperty(default = {})
     

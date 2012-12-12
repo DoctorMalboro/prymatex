@@ -242,7 +242,7 @@ class PMXProjectDock(QtGui.QDockWidget, Ui_ProjectsDock, PMXFileSystemTasks, PMX
         if not index.isValid():
             index = self.treeViewProjects.currentIndex()
         self.buildContextMenu(index).popup(self.treeViewProjects.mapToGlobal(point))
-    
+
     def on_treeViewProjects_doubleClicked(self, index):
         self.on_actionOpen_triggered()
 
